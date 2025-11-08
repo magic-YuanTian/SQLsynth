@@ -432,13 +432,6 @@ SQLsynth_repo/
 └── README.md
 ```
 
-### Key Technologies
-
-- **Backend**: Flask, SQLite, spaCy, NLTK
-- **Frontend**: React, Material-UI, ReactFlow, Recharts
-- **LLM Integration**: OpenAI API (configurable)
-- **SQL Parsing**: sqlparse, sql-metadata
-
 ## 📝 Citation
 
 If you use SQLsynth in your research, please cite:
@@ -457,38 +450,13 @@ If you use SQLsynth in your research, please cite:
 
 ```
 
-## 🤝 Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request. For major changes:
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgments
 
-- Spider dataset for providing the schema examples and in-context learning pool
-- The text-to-SQL research community for inspiring this work
+- Adobe Property
 
 ## 📧 Contact
 
-For questions or feedback, please open an issue on GitHub or contact [yuan-tian.com](https://yuan-tian.com).
+For questions or feedback, please open an issue on GitHub or contact by tian211@purdue.edu.
 
 
-## 🔮 Future Work
-
-- Support for more SQL dialects (PostgreSQL, MySQL-specific features)
-- Improved handling of complex nested queries
-- Enhanced visualization for query execution plans
-- Multi-language support for natural language descriptions
-- Integration with more LLM providers
-
----
-
-Made with ❤️ for the text-to-SQL research community
