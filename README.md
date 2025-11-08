@@ -444,12 +444,17 @@ SQLsynth_repo/
 If you use SQLsynth in your research, please cite:
 
 ```bibtex
-@software{sqlsynth,
-  title={SQLsynth: A Tool for Synthesizing SQL Queries and Natural Language Descriptions},
-  author={Your Name},
-  year={2024},
-  url={https://github.com/yourusername/SQLsynth}
-}
+@inproceedings{Tian_2025, series={IUI ’25},
+   title={Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation},
+   url={http://dx.doi.org/10.1145/3708359.3712083},
+   DOI={10.1145/3708359.3712083},
+   booktitle={Proceedings of the 30th International Conference on Intelligent User Interfaces},
+   publisher={ACM},
+   author={Tian, Yuan and Lee, Daniel and Wu, Fei and Mai, Tung and Qian, Kun and Sahai, Siddhartha and Zhang, Tianyi and Li, Yunyao},
+   year={2025},
+   month=mar, pages={1398–1425},
+   collection={IUI ’25} }
+
 ```
 
 ## 🤝 Contributing
