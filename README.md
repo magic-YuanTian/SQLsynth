@@ -16,8 +16,6 @@ It uniquely combines:
 - Alignment-based error detection and repair  
 - Dataset diversity visualization  
 
-This repository accompanies our IUI’25 paper:  
-**Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation**.
 
 ## 🌟 Features
 
