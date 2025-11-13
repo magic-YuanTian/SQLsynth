@@ -8,13 +8,13 @@ This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM 
 **SQLsynth** is both an interactive annotation and automated system designed for generating *schema-specific* text-to-SQL datasets. 
 
 
-It uniquely combines:
+### Key features:
 
-- PCFG-based SQL sampling  
-- LLM-assisted natural language generation  
-- Step-by-step SQL explanation  
-- Alignment-based error detection and repair  
-- Dataset diversity visualization  
+- PCFG-based SQL sampler (probabilities and rules are configurable)
+- Use grammar to parse SQL into step-by-step NL explanations
+- SQL-to-text generation based on in-context leanring & step-by-step explanation
+- Novel alignment feature: Aligning SQL to NL by step-by-step explanations
+- Dataset statistics & visualization  
 
 
 ## 🌟 Features
