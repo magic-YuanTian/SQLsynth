@@ -1,6 +1,23 @@
 # SQLsynth
 
-**SQLsynth** is an intelligent tool for synthesizing SQL queries and their natural language descriptions. It combines rule-based parsing with large language models (LLMs) to generate, analyze, and visualize the relationship between SQL queries and natural language questions.
+This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation](https://arxiv.org/abs/2502.15980).
+
+*Note: This repo serves as the latest and backup version of the [official repo](https://github.com/adobe/nl_sql_analyzer).*
+  
+
+**SQLsynth** is both an interactive annotation and automated system designed for generating *schema-specific* text-to-SQL datasets. 
+
+
+It uniquely combines:
+
+- PCFG-based SQL sampling  
+- LLM-assisted natural language generation  
+- Step-by-step SQL explanation  
+- Alignment-based error detection and repair  
+- Dataset diversity visualization  
+
+This repository accompanies our IUI’25 paper:  
+**Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation**.
 
 ## 🌟 Features
 
