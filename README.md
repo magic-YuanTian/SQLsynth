@@ -76,14 +76,6 @@ python -m spacy download en_core_web_sm
    - Implement your own `get_openai_response()` function
    - The function should take a string prompt as input and return a string response
 
-Example implementation:
-```python
-def get_openai_response(prompt):
-    # Your LLM API call here
-    # Input: prompt (string)
-    # Output: response (string)
-    pass
-```
 
 ### Frontend Setup
 
@@ -93,12 +85,7 @@ cd frontend
 npm install
 ```
 
-2. If you encounter missing dependencies, install them as needed:
-```bash
-npm install react-scripts --save-dev
-npm install draft-js
-npm install lodash
-```
+2. If you encounter missing dependencies, please use `npm install` for necessary packages based on pop-up instructions.
 
 ## 🎯 Quick Start
 
@@ -119,6 +106,8 @@ npm start
 The frontend will run on `http://localhost:3000` by default.
 
 3. Open your browser and navigate to `http://localhost:3000`
+
+4. Enjoy it! 🎉
 
 ### Basic Workflow
 
