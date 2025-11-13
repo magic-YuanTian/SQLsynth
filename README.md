@@ -2,7 +2,7 @@
 
 This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation](https://arxiv.org/abs/2502.15980).
 
-*Note: This repo serves as the latest and backup version of the [official repo](https://github.com/adobe/nl_sql_analyzer).*
+*Note: This repo serves as the latest and backup version of the [official Adobe repo](https://github.com/adobe/nl_sql_analyzer).*
   
 
 **SQLsynth** is both an interactive annotation and automated system designed for generating *schema-specific* text-to-SQL datasets. 
