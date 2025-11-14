@@ -8,13 +8,15 @@
   <a href="https://dl.acm.org/doi/10.1145/3708359.3712083"><img src="https://img.shields.io/badge/ACM-IUI'25-0085CA.svg" alt="ACM"></a>
 </p>
 
+<p align="center">
+  <img width="800" alt="teaser" src="https://github.com/user-attachments/assets/cfb9613e-abfb-48cb-9b48-1525c003ec07" />
+</p>
 
 
 This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation](https://arxiv.org/abs/2502.15980).
 
 - *Note: This repo serves as the latest and backup version of the [official Adobe repo](https://github.com/adobe/nl_sql_analyzer).*
   
-
 SQLsynth is not only an **interactive data annotation** but also **automated data synthesis** tool designed for quickly creating highly customized (e.g., schema, DB records, distribution) text-to-SQL datasets. 
 
 
@@ -34,6 +36,7 @@ SQLsynth is not only an **interactive data annotation** but also **automated dat
   - Based on PCFG (Probability Context-Free Grammar) and other rules to extract records from a specified database.
   - The probability distribution is configurable (e.g., increase the number of queries with WHERE clauses or those involving a specific column).
   - Syntax is customizable (e.g., support for user-defined SQL dialect).
+  - Filter by executing the SQL to ensure it is associated with meaningful execution results
   - 📦 --> A large amount of SQL queries (with a customized distribution) under the provided database
 - **SQL-to-Text Generation**
   - Convert SQL queries into NL questions
@@ -47,32 +50,27 @@ SQLsynth is not only an **interactive data annotation** but also **automated dat
   - Error checking for generated NL (note that the SQL is absolutely correct)
   - Use to analyze (1) what information may be missing (the SQL component fails to map to NL components), and (2) what information may be redundant (the NL component doesn't map to any SQL compoenent)
   - Interactively highlight by visual correspondence in the UI
-  - 📦 --> A large amount of *reliable* (NL, SQL) pairs under the customized database
+  - Scoring: Given a NL-SQL paier, evaluate the quality on a scale from 0 to 100, with analysis in NL
+  - 📦 --> A large amount of *refined* (NL, SQL) pairs under the customized database
 - **Dataset statistics & visualization**:
-  - xx
+  - Upload and analyze existing SQL query datasets
+  - Assist users in tracking datasets from a dataset-level perspective
+  - Comprehensive statistics dashboard with summary metrics (total queries, unique keywords, average complexity),including:
+    - SQL structure distribution
+    - Keyword frequency distribution
+    - Clause number distribution
+    - Column and table usage patterns
+    - Query complexity distribution
+    - Reference value distribution
+  - 📦 --> Insights into dataset characteristics and qualities
 
 
-## 📋 Table of Contents
+<p align="center">
+  <img width="800" alt="overview" src="https://github.com/user-attachments/assets/538533f8-eebc-42f0-8f80-2822fb707847" />
+</p>
 
-- [Installation](#installation)
-- [Quick Start](#quick-start)
-- [Architecture](#architecture)
-- [Usage](#usage)
-  - [Web Interface](#web-interface)
-  - [Script-Based Synthesis](#script-based-synthesis)
-- [Configuration](#configuration)
-- [API Reference](#api-reference)
-- [User Study](#user-study)
-- [Contributing](#contributing)
-- [License](#license)
 
-## 🚀 Installation
-
-### Prerequisites
-
-- Python 3.8+
-- Node.js 14+
-- npm or yarn
+## 📦 Installation
 
 ### Backend Setup
 
@@ -111,7 +109,7 @@ npm install
 
 2. If you encounter missing dependencies, please use `npm install` for necessary packages based on pop-up instructions.
 
-## 🎯 Quick Start
+## 🚀 Quick Start
 
 ### Running the Application
 
@@ -131,16 +129,41 @@ The frontend will run on `http://localhost:3000` by default.
 
 3. Open your browser and navigate to `http://localhost:3000`
 
-4. Enjoy it! 🎉
+4. Enjoy! 🎉
 
-### Basic Workflow
 
-1. **Schema Tab**: Design or import your database schema
-2. **Database Tab**: Generate synthetic records for your schema
-3. **Dataset Tab**: Synthesize SQL queries and natural language pairs
-4. **Analysis Tab**: Analyze alignment between SQL and natural language
 
-## 🏗️ Architecture
+## 🏗️ Project Structure
+
+```
+SQLsynth_repo/
+├── backend/
+│   ├── server.py              # Main Flask server
+│   ├── SQL_synthesizer.py     # Query synthesis engine
+│   ├── SQL2NL_clean.py        # Rule-based SQL parser
+│   ├── llm_analysis.py        # LLM prompts and analysis
+│   ├── records_synthesizer.py # Record generation
+│   ├── ICL_retriever.py       # Example retrieval
+│   ├── db_handling.py         # Database utilities
+│   ├── openai_api.py          # LLM API interface
+│   ├── evaluation_steps.py    # Evaluation tools
+│   ├── *_config.json          # Configuration files
+│   ├── output_data/           # Generated datasets
+│   └── temp_db/               # Temporary databases
+├── frontend/
+│   ├── src/
+│   │   ├── App.jsx            # Main app component
+│   │   ├── SchemaTab.jsx      # Schema designer
+│   │   ├── DatabaseTab.jsx    # Record management
+│   │   ├── DatasetTab.jsx     # Dataset synthesis
+│   │   └── AnalysisTab.jsx    # Analysis interface
+│   ├── public/                # Static assets
+│   └── package.json           # Dependencies
+├── user_study/
+│   └── spider_schemas/        # 166 Spider schemas
+└── README.md
+```
+
 
 ### Backend (`backend/`)
 
@@ -171,7 +194,6 @@ The frontend will run on `http://localhost:3000` by default.
 
 ## 📖 Usage
 
-### Web Interface
 
 #### 1. Schema Design
 
@@ -201,6 +223,9 @@ Schema format example:
   }
 }
 ```
+<p align="center">
+  <img width="800" alt="page1" src="https://github.com/user-attachments/assets/dda9b1a3-c811-415a-a5b5-3853363b40e7" />
+</p>
 
 #### 2. Record Synthesis
 
@@ -208,8 +233,12 @@ Schema format example:
 - Specify the number of records to generate
 - Records respect foreign key constraints and data types
 - Export records to JSON
+  
+<p align="center">
+  <img width="800" alt="page2" src="https://github.com/user-attachments/assets/b41292e2-1203-43bc-9349-646e8c404bc1" />
+</p>
 
-#### 3. SQL Query Synthesis
+#### 3. NL-SQL pair Synthesis
 
 - Configure query distribution (number of tables, columns, clauses)
 - Generate individual queries or batch synthesis
@@ -217,7 +246,21 @@ Schema format example:
 - Get suggested natural language descriptions
 - Check alignment between SQL and NL
 
-#### 4. Dataset Analysis
+<p align="center">
+  <img width="800" alt="page3_core" src="https://github.com/user-attachments/assets/b57c7f71-2242-4c4b-8224-97b4e7c1d8cf" />
+</p>
+
+#### 4. NL-SQL pair Scoring
+
+- Evaluate the quality and equivalence between natural language questions and SQL queries
+- Score with explanations
+
+<p align="center">
+  <img width="800" alt="page3_2" src="https://github.com/user-attachments/assets/0f3c0f36-d3dd-40dd-84dc-8be7585d82ed" />
+</p>
+
+
+#### 5. Dataset Analysis
 
 - Upload existing SQL query datasets
 - View comprehensive statistics:
@@ -227,9 +270,16 @@ Schema format example:
   - Column and table usage
   - Query complexity metrics
 
+<p align="center">
+  <img width="800" alt="page4" src="https://github.com/user-attachments/assets/4cfd0ec4-92a0-4202-8727-7fe305603483" />
+</p>
+
+
+
 ### Script-Based Synthesis
 
-For large-scale dataset generation without the UI:
+While human-in-the-loop guarantees the data quality, you can also opt for large-scale dataset generation without the UI:
+
 
 ```python
 from server import auto_synthetic_data
@@ -252,7 +302,10 @@ synthetic_data = auto_synthetic_data(
 - `example_path`: Path to example pool for in-context learning
 - `data_num`: Number of SQL-NL pairs to generate
 
-## ⚙️ Configuration
+### Configuration
+
+<details>
+<summary>Click to expand configuration details</summary>
 
 ### Query Distribution Configuration
 
@@ -298,7 +351,12 @@ const ip = 'your.server.ip';  // or domain name
 const port = 5001;
 ```
 
-## 🔌 API Reference
+</details>
+
+### API Reference
+
+<details>
+<summary>Click to expand API reference details</summary>
 
 ### Key Endpoints
 
@@ -414,51 +472,10 @@ Analyze an uploaded SQL query dataset.
 }
 ```
 
-## 👥 User Study
+</details>
 
-The `user_study/` folder contains 166 Spider database schemas for evaluation purposes. These schemas can be directly imported into SQLsynth:
 
-1. Navigate to the Schema Tab
-2. Drag and drop any `.json` schema file from `user_study/spider_schemas/`
-3. The schema will be automatically loaded
 
-These schemas are useful for:
-- Testing SQLsynth on diverse database structures
-- Benchmarking against the Spider text-to-SQL dataset
-- Conducting user studies on SQL-NL alignment
-
-## 🛠️ Development
-
-### Project Structure
-
-```
-SQLsynth_repo/
-├── backend/
-│   ├── server.py              # Main Flask server
-│   ├── SQL_synthesizer.py     # Query synthesis engine
-│   ├── SQL2NL_clean.py        # Rule-based SQL parser
-│   ├── llm_analysis.py        # LLM prompts and analysis
-│   ├── records_synthesizer.py # Record generation
-│   ├── ICL_retriever.py       # Example retrieval
-│   ├── db_handling.py         # Database utilities
-│   ├── openai_api.py          # LLM API interface
-│   ├── evaluation_steps.py    # Evaluation tools
-│   ├── *_config.json          # Configuration files
-│   ├── output_data/           # Generated datasets
-│   └── temp_db/               # Temporary databases
-├── frontend/
-│   ├── src/
-│   │   ├── App.jsx            # Main app component
-│   │   ├── SchemaTab.jsx      # Schema designer
-│   │   ├── DatabaseTab.jsx    # Record management
-│   │   ├── DatasetTab.jsx     # Dataset synthesis
-│   │   └── AnalysisTab.jsx    # Analysis interface
-│   ├── public/                # Static assets
-│   └── package.json           # Dependencies
-├── user_study/
-│   └── spider_schemas/        # 166 Spider schemas
-└── README.md
-```
 
 ## 📝 Citation
 
@@ -478,10 +495,10 @@ If you use SQLsynth in your research, please cite:
 
 ```
 
-
 ## 🙏 Acknowledgments
 
-- Adobe Property
+- This work was completed during an internship at Adobe.
+- Adobe Property.
 
 ## 📧 Contact
 
