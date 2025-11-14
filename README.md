@@ -57,14 +57,14 @@ SQLsynth is not only an **interactive data annotation** but also **automated dat
     2. Conduct in-context on specified real-world data for style adaptation
     3. Generating the NL question by LLMs
   - 📦 --> A large amount of (NL, SQL) pairs under the customized database, where NL questions may be perfect (ambiguous, lack details, etc.)
-- **Text-SQL Alignment**:
+- **Text-SQL Alignment**
   - Mapping NL components (substrings) to SQL compoenents (clauses)
   - Error checking for generated NL (note that the SQL is absolutely correct)
   - Use to analyze (1) what information may be missing (the SQL component fails to map to NL components), and (2) what information may be redundant (the NL component doesn't map to any SQL compoenent)
   - Interactively highlight by visual correspondence in the UI
   - Scoring: Given a NL-SQL paier, evaluate the quality on a scale from 0 to 100, with analysis in NL
   - 📦 --> A large amount of *refined* (NL, SQL) pairs under the customized database
-- **Dataset statistics & visualization**:
+- **Dataset Statistics & Visualization**
   - Upload and analyze existing SQL query datasets
   - Assist users in tracking datasets from a dataset-level perspective
   - Comprehensive statistics dashboard with summary metrics (total queries, unique keywords, average complexity),including:
