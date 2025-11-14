@@ -19,9 +19,18 @@ This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM 
 
 ## 🌟 Features
 
-- **SQL Query Synthesis**: Automatically generate diverse SQL queries based on database schemas using probabilistic context-free grammar (PCFG)
-- **SQL-to-NL Translation**: Convert SQL queries into natural language descriptions using hybrid rule-based and LLM approaches
-- **NL-to-SQL Analysis**: Analyze alignment between natural language questions and SQL query components
+- **SQL Query Synthesis**
+  - Randomly sample SQL queries.
+  - Based on PCFG (Probability Context-Free Grammar) and other rules to extract records from a specified database.
+  - The probability distribution is configurable (e.g., increase the number of queries with WHERE clauses or those involving a specific column).
+  - Syntax is customizable (e.g., support for user-defined SQL dialect).
+- **SQL-to-Text Generation**
+  - Convert SQL queries into NL questions
+  - Three stages:
+    1. Convert the SQL query into step-by-step NL explanations by a [grammar-based method](https://github.com/magic-YuanTian/STEPS).
+    2. Conduct in-context on specified real-world data for style adaptation
+    3. Generating the NL question by LLMs
+- **Text-to-SQL Analysis**: Analyze alignment between natural language questions and SQL query components
 - **Database Record Generation**: Synthesize realistic database records respecting foreign key constraints and data types
 - **Dataset Analysis**: Comprehensive statistical analysis of SQL query datasets
 - **Interactive UI**: User-friendly web interface with schema design, database management, and analysis capabilities
