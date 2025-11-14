@@ -28,7 +28,7 @@ This is the repo for the [<img width="30" height="30" alt="iui_icon" src="https:
 SQLsynth is not only an **interactive data annotation** but also **automated data synthesis** tool designed for quickly creating highly customized (e.g., schema, DB records, distribution) text-to-SQL datasets. 
 
 
-🌐 **Live Demo**: [Try me](https://hcss.cs.purdue.edu/spa) 👈🏻
+🌐 **Live Demo**: [Try me](http://18.207.218.62:3503/) 👈🏻
 
 <br>
 
