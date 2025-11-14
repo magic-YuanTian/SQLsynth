@@ -74,7 +74,7 @@ SQLsynth is not only an **interactive data annotation** but also **automated dat
 
 
 <p align="center">
-  <img width="800" alt="overview" src="https://github.com/user-attachments/assets/538533f8-eebc-42f0-8f80-2822fb707847" />
+  <img width="600" alt="overview" src="https://github.com/user-attachments/assets/538533f8-eebc-42f0-8f80-2822fb707847" />
 </p>
 
 
@@ -510,6 +510,6 @@ If you use SQLsynth in your research, please cite:
 
 ## 📧 Contact
 
-For questions or feedback, please open an issue on GitHub or contact by tian211@purdue.edu.
+For questions or feedback, please open an issue on GitHub or contact me by [tian211@purdue.edu](tian211@purdue.edu).
 
 
