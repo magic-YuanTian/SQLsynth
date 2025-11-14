@@ -1,6 +1,6 @@
 <h1 align="center"> SQLsynth <img width="27" height="27" alt="adobe_logo" src="https://github.com/user-attachments/assets/4e10e149-e11f-4a4a-abcd-d8b05e0eddaa" />  <img width="30" height="30" alt="acm" src="https://github.com/user-attachments/assets/a21fc439-2b15-4b55-a329-95fa8551772f" /> </h1>
 <p align="center">
-  <em>[IUI 2025] Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation</em>
+  <strong><span>[IUI 2025]</span></strong> <em> Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation</em>
 </p>
 
 
