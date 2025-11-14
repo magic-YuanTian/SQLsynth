@@ -13,9 +13,9 @@
 </p>
 
 
-This is the repo for the [<img width="40" height="40" alt="iui_icon" src="https://github.com/user-attachments/assets/bc496a3c-fad1-4950-a386-79df579d6ffc" /> IUI 2025 paper](https://arxiv.org/abs/2502.15980)
+This is the repo for the [<img width="30" height="30" alt="iui_icon" src="https://github.com/user-attachments/assets/bc496a3c-fad1-4950-a386-79df579d6ffc" /> IUI 2025 paper](https://arxiv.org/abs/2502.15980)
 
-- *Note: This repo serves as the latest version and the backup of the [official repo <img width="20" height="20" alt="adobe_logo" src="https://github.com/user-attachments/assets/4e10e149-e11f-4a4a-abcd-d8b05e0eddaa" />](https://github.com/adobe/nl_sql_analyzer)*
+- *Note: This repo serves as the latest version and the backup of the [official repo at Adobe <img width="20" height="20" alt="adobe_logo" src="https://github.com/user-attachments/assets/4e10e149-e11f-4a4a-abcd-d8b05e0eddaa" />](https://github.com/adobe/nl_sql_analyzer)*
   
 
 SQLsynth is not only an **interactive data annotation** but also **automated data synthesis** tool designed for quickly creating highly customized (e.g., schema, DB records, distribution) text-to-SQL datasets. 
