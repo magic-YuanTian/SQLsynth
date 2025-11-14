@@ -5,7 +5,7 @@ This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM 
 *Note: This repo serves as the latest and backup version of the [official Adobe repo](https://github.com/adobe/nl_sql_analyzer).*
   
 
-**SQLsynth** is both an interactive annotation and automated system designed for generating *schema-specific* text-to-SQL datasets. 
+**SQLsynth** is not only an *interactive data annotation* but also *automated data synthesis* tool designed for quickly create highly customized (i.e. schema, DB records, distribution) text-to-SQL datasets. 
 
 
 ### Key features:
@@ -19,7 +19,7 @@ This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM 
 
 ## 🌟 Features
 
-- **SQL Query Synthesis**
+- **SQL Query Sampling**
   - Randomly sample SQL queries.
   - Based on PCFG (Probability Context-Free Grammar) and other rules to extract records from a specified database.
   - The probability distribution is configurable (e.g., increase the number of queries with WHERE clauses or those involving a specific column).
@@ -30,7 +30,7 @@ This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM 
     1. Convert the SQL query into step-by-step NL explanations by a [grammar-based method](https://github.com/magic-YuanTian/STEPS).
     2. Conduct in-context on specified real-world data for style adaptation
     3. Generating the NL question by LLMs
-- **Text-to-SQL Analysis**: Analyze alignment between natural language questions and SQL query components
+- **Text-SQL Alignment**: Analyze alignment between natural language questions and SQL query components
 - **Database Record Generation**: Synthesize realistic database records respecting foreign key constraints and data types
 - **Dataset Analysis**: Comprehensive statistical analysis of SQL query datasets
 - **Interactive UI**: User-friendly web interface with schema design, database management, and analysis capabilities
