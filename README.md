@@ -27,6 +27,7 @@ This is the repo for the [<img width="30" height="30" alt="iui_icon" src="https:
 
 SQLsynth is not only an **interactive data annotation** but also **automated data synthesis** tool designed for quickly creating highly customized (e.g., schema, DB records, distribution) text-to-SQL datasets. 
 
+<br>
 
 ## 🌟 Features
 
@@ -77,6 +78,7 @@ SQLsynth is not only an **interactive data annotation** but also **automated dat
   <img width="600" alt="overview" src="https://github.com/user-attachments/assets/538533f8-eebc-42f0-8f80-2822fb707847" />
 </p>
 
+<br>
 
 ## 📦 Installation
 
@@ -117,6 +119,8 @@ npm install
 
 2. If you encounter missing dependencies, please use `npm install` for necessary packages based on pop-up instructions.
 
+<br>
+
 ## 🚀 Quick Start
 
 ### Running the Application
@@ -140,8 +144,9 @@ The frontend will run on `http://localhost:3000` by default.
 4. Enjoy! 🎉
 
 
+<br>
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 SQLsynth_repo/
@@ -200,7 +205,9 @@ SQLsynth_repo/
 - **`learned_config.json`**: Learned probability distribution from existing datasets
 - **`spider_example_pool.json`**: Example pool for in-context learning
 
-## 📖 Usage
+<br>
+
+## Usage
 
 
 #### 1. Schema Design
@@ -361,6 +368,7 @@ const port = 5001;
 
 </details>
 
+
 ### API Reference
 
 <details>
@@ -483,9 +491,9 @@ Analyze an uploaded SQL query dataset.
 </details>
 
 
+<br>
 
-
-## 📝 Citation
+## Citation
 
 If you use SQLsynth in your research, please cite:
 
@@ -503,12 +511,16 @@ If you use SQLsynth in your research, please cite:
 
 ```
 
-## 🙏 Acknowledgments
+<br>
+
+## Acknowledgments
 
 - This work was completed during an internship at Adobe
 - Adobe Property <img width="20" height="20" alt="adobe_logo" src="https://github.com/user-attachments/assets/4e10e149-e11f-4a4a-abcd-d8b05e0eddaa" />
 
-## 📧 Contact
+<br>
+
+## Contact
 
 For questions or feedback, please open an issue on GitHub or contact me by [tian211@purdue.edu](tian211@purdue.edu).
 
