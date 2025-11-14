@@ -19,23 +19,37 @@ SQLsynth is not only an **interactive data annotation** but also **automated dat
 
 ## 🌟 Features
 
+- **Database Schema Customization**
+  - Freely create, edit, annotate (use NL to label the semantics of database fields, useful for LLMs) in the canvas.
+  - 📦 --> A highly customized database schema, with meaningful descriptions
+- **Database Records Population**
+  - Given a database schema, populate it with concrete records
+  - Rule-based method (No LLM calling)
+  - Recognized for different datatype
+  - Distribution is configurable
+  - 📦 --> A complete, customized database full of records
 - **SQL Query Sampling**
-  - Randomly sample SQL queries.
+  - Given a database, randomly sample SQL queries.
   - Based on PCFG (Probability Context-Free Grammar) and other rules to extract records from a specified database.
   - The probability distribution is configurable (e.g., increase the number of queries with WHERE clauses or those involving a specific column).
   - Syntax is customizable (e.g., support for user-defined SQL dialect).
+  - 📦 --> A large amount of SQL queries (with a customized distribution) under the provided database
 - **SQL-to-Text Generation**
   - Convert SQL queries into NL questions
   - Three stages:
     1. Convert the SQL query into step-by-step NL explanations by a [grammar-based method](https://github.com/magic-YuanTian/STEPS).
     2. Conduct in-context on specified real-world data for style adaptation
     3. Generating the NL question by LLMs
-- **Text-SQL Alignment**: Analyze alignment between natural language questions and SQL query components
-- **Database Record Generation**: Synthesize realistic database records respecting foreign key constraints and data types
-- **Dataset Analysis**: Comprehensive statistical analysis of SQL query datasets
-- **Interactive UI**: User-friendly web interface with schema design, database management, and analysis capabilities
-- **In-Context Learning**: Leverage similar examples from the Spider dataset for improved natural language generation
-- **Batch Processing**: Script-based data synthesis for generating large-scale datasets
+  - 📦 --> A large amount of (NL, SQL) pairs under the customized database, where NL questions may be perfect (ambiguous, lack details, etc.)
+- **Text-SQL Alignment**:
+  - Mapping NL components (substrings) to SQL compoenents (clauses)
+  - Error checking for generated NL (note that the SQL is absolutely correct)
+  - Use to analyze (1) what information may be missing (the SQL component fails to map to NL components), and (2) what information may be redundant (the NL component doesn't map to any SQL compoenent)
+  - Interactively highlight by visual correspondence in the UI
+  - 📦 --> A large amount of *reliable* (NL, SQL) pairs under the customized database
+- **Dataset statistics & visualization**:
+  - xx
+
 
 ## 📋 Table of Contents
 
