@@ -1,4 +1,11 @@
-# SQLsynth
+<h1 align="center">SQLsynth</h1>
+
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2502.15980"><img src="https://img.shields.io/badge/arXiv-2408.09121-b31b1b.svg" alt="arXiv"></a>
+</p>
+
+
 
 This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation](https://arxiv.org/abs/2502.15980).
 
@@ -6,15 +13,6 @@ This is the repo for IUI'25 paper, [Text-to-SQL Domain Adaptation via Human-LLM 
   
 
 SQLsynth is not only an **interactive data annotation** but also **automated data synthesis** tool designed for quickly creating highly customized (e.g., schema, DB records, distribution) text-to-SQL datasets. 
-
-
-### Key features:
-
-- PCFG-based SQL sampler (probabilities and rules are configurable)
-- Use grammar to parse SQL into step-by-step NL explanations
-- SQL-to-text generation based on in-context leanring & step-by-step explanation
-- Novel alignment feature: Aligning SQL to NL by step-by-step explanations
-- Dataset statistics & visualization  
 
 
 ## 🌟 Features
