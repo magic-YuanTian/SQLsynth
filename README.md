@@ -1,6 +1,6 @@
 <h1 align="center">SQLsynth</h1>
 <p align="center">
-  <em>Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation</em>
+  <em>[IUI 2025] Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation</em>
 </p>
 
 <p align="center">
