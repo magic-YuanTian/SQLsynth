@@ -1,8 +1,9 @@
-<h1 align="center"> SQLsynth <img width="27" height="27" alt="adobe_logo" src="https://github.com/user-attachments/assets/4e10e149-e11f-4a4a-abcd-d8b05e0eddaa" />  <img width="30" height="30" alt="acm" src="https://github.com/user-attachments/assets/a21fc439-2b15-4b55-a329-95fa8551772f" /> </h1>
+<h1 align="center"> SQLsynth  </h1>
+
+ 
 <p align="center">
   <strong><span>[IUI 2025]</span></strong> <em> Text-to-SQL Domain Adaptation via Human-LLM Collaborative Data Annotation</em>
 </p>
-
 
 
 
@@ -20,7 +21,7 @@
 
 
 
-This is the repo for the [<img width="30" height="30" alt="iui_icon" src="https://github.com/user-attachments/assets/bc496a3c-fad1-4950-a386-79df579d6ffc" /> IUI 2025 paper](https://arxiv.org/abs/2502.15980)
+This is the repo for the [IUI 2025 paper](https://arxiv.org/abs/2502.15980)
 
 - *Note: This repo serves as the latest version and the backup of the [official repo at Adobe ](https://github.com/adobe/nl_sql_analyzer)*
   
