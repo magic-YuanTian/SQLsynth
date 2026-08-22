@@ -29,7 +29,7 @@ This is the repo for the [IUI 2025 paper](https://arxiv.org/abs/2502.15980)
 SQLsynth is not only an **interactive data annotation** but also **automated data synthesis** tool designed for quickly creating highly customized (e.g., schema, DB records, distribution) text-to-SQL datasets. 
 
 
-🌐 **Live Demo**: [Try me](http://18.207.218.62:3503/) 👈🏻
+🌐 **Live Demo**: [Try me](https://yuan-tian.com/demo/sqlsynth) 👈🏻
 
 <br>
 
